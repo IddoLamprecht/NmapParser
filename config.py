@@ -3,7 +3,12 @@ import configparser
 
 config = configparser.ConfigParser()
 
-
+config["FileElem"] = {
+    "scaninfo": ""
+}
+config["LogElem"] = {
+    "host": "",
+}
 
 config["host"] = {
     "address": "",
@@ -11,10 +16,16 @@ config["host"] = {
     "Status": ""
 }
 
+config["scaninfo"]= {
+    "type": ""
+}
+
+
 config["Extract"] = {
     "address": ["addr"],
-    "port": ["portid","protocol"],
-    "Status" : ["state"]
+    "port": ["portid", "protocol"],
+    "Status": ["state"],
+    "type": ["type"]
 
 }
 config["Directories"] = {

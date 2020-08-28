@@ -28,5 +28,5 @@ for File in list_of_files:
     Extract_File.ExtractFile()
 
     # create the csv file for all the nmap log files
-    CSVFile("/Users/iddolamprecht/Desktop/Normalize_Test/EXTRACT_" + File + ".csv", Extract_File.Log_Results,
+    CSVFile(config["Directories"]["Nmap_CSV_write"] + File + ".csv", Extract_File.Log_Results,
             Extract_File.Log_Titles)

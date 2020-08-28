@@ -32,9 +32,10 @@ config["Extract"] = {
     "type": ["type"]
 
 }
-# the file path that im reading from
+# the file where to read and write from
 config["Directories"] = {
     "Nmap_XML_dir": "/Users/iddolamprecht/Desktop/Normalize/",
+    "Nmap_CSV_write": "/Users/iddolamprecht/Desktop/Normalize_Test/EXTRACT_"
 
 }
 # create the config file

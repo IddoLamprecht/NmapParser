@@ -1,0 +1,20 @@
+# NmapParser
+
+NmapParser is a project purposed to read nmap logs and put them in a CSV file.
+
+## How To use
+ The project creates a config file named "ExtractNmapLogs.ini" there you can choose what logs you want extract and what values.
+ 
+ There you choose from which directory you read ("Nmap_XML_dir") your nmap file and write ("Nmap_CSV_write") your result under the "Directories" property.
+ 
+ once you choose your directories you can choose which attributes you want to read. there are two types of attributes, one that are in the file (ex: scaninfo) 
+ and log attributes, attributes that are in the file multiple times and each represnt a row in the intended CSV file.
+ 
+ in order to retrieve the relevant data you must put a few parameters that are relevant in order to extract the data:
+ 
+ 1. base element: you need to know what is the first element in order to know where to search in the file ("FileElem" or "LogElem")
+ 2. path: you need to know from where the data is in order to retrieve it (under a property with the name of the base element). 
+ 3. ColumnName : you need to put the data under the column name of your choosing.
+ 
+all the data you need to know about where to extract is in the [dtd file] (https://svn.nmap.org/nmap/docs/nmap.dtd)
+ 

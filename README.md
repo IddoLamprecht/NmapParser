@@ -33,3 +33,8 @@ All the data you need to know about where to extract is in the [dtd file] (https
   CSVFile(csv_file_name, data_array, title_names)
   
   
+#### License
+
+Iddo Lamprecht
+
+  

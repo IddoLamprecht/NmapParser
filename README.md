@@ -18,3 +18,16 @@ NmapParser is a project purposed to read nmap logs and put them in a CSV file.
  
 All the data you need to know about where to extract is in the [dtd file] (https://svn.nmap.org/nmap/docs/nmap.dtd)
  
+ ### Usage
+  from CreateCSV import CSVFile
+  import os
+  from NmapFile import NmapFile
+  
+  Log_Source = config["Directories"]["Nmap_XML_dir"]
+  
+  Extract_File = NmapFile(Log_Source + File)
+  Extract_File.ExtractFile()
+
+  CSVFile(csv_file_name, data_array, title_names)
+  
+  

@@ -20,7 +20,9 @@ All the data you need to know about where to extract is in the [dtd file] (https
  
  ### Usage
   from CreateCSV import CSVFile
+  
   import os
+  
   from NmapFile import NmapFile
   
   Log_Source = config["Directories"]["Nmap_XML_dir"]

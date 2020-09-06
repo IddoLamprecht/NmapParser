@@ -48,7 +48,7 @@ config["Extract"] = {
 the config file also accepts directories, from where you can read all the nmap files of the given directory, and the directory you wish to write the final CSV file.
 
  
-All the data you need to know about the each attribute you wish to extracy is in the [dtd file](https://svn.nmap.org/nmap/docs/nmap.dtd)
+All the data you need to know about the each attribute you wish to extracy is in the [dtd file](https://svn.nmap.org/nmap/docs/nmap.dtd).
  
 the project itself contains multiple objects.
 

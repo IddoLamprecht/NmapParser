@@ -68,8 +68,7 @@ to initalise this object, you must give it the parameter:
 
 
 
-Example of how to run the project in order to extract the data and insert it into a csv file: 
-
+### Usage
 ```
 from CreateCSV import CSVFile
 import configparser 

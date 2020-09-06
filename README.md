@@ -36,11 +36,11 @@ NmapParser is a project purposed to read nmap logs and normalise the logs into a
 }
 
 config["host"] = {
-    "attribute": "path",
+    "column_name": "path",
 }
 
 config["Extract"] = {
-    "column_name": ["attribute_value"]
+    "column_name": ["attribute_name"]
 
 }
  
@@ -50,10 +50,27 @@ the config file also accepts directories, from where you can read all the nmap f
  
 All the data you need to know about the each attribute you wish to extracy is in the [dtd file] (https://svn.nmap.org/nmap/docs/nmap.dtd)
  
+the project itself contains multiple objects.
 
-Example of how to run the project in order to extract the data: 
+The first object is NmapFile.
+In order to initialise the object you need to give it the object file name (with directory)
+To extract the relevant data into an array (contained in the Log_Results property you need to run the ExtractFile function.
+This function know how to go to the nmap xml, and extract the data you wish, according to the configuration that the project contains.
+This function will also insert into the property Log_Titles the array of titles you have given in the configuration file.
 
-```  from CreateCSV import CSVFile
+once this function has run, you will be able to use those arrays, and insert them into a CSV file, which is the second object this file contains.
+
+in order to create the csv file, all you have to do is initalise the object.
+to initalise this object, you must give it the parameter:
+- file_name - this is the file name that the data that was extracted from the files, will enter the csv with this name (with directory)
+- data_array - this is the array that contains the values of each row in the csv.
+- title_names - this is the array of titles, that will be in the csv file.
+
+
+
+Example of how to run the project in order to extract the data and insert it into a csv file: 
+
+```from CreateCSV import CSVFile
   
   import os
   
@@ -66,7 +83,7 @@ Example of how to run the project in order to extract the data:
   CSVFile(csv_file_name, data_array, title_names)
   ```
   
-  
+
 ##### License
 
 Iddo Lamprecht

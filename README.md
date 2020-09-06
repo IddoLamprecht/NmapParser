@@ -41,16 +41,13 @@ column_name = "path"
 column_name = ["attribute_name"]
 column_name = ["attribute_name"]
 
-
-
- 
 ```
-the config file also accepts directories, from where you can read all the nmap files of the given directory, and the directory you wish to write the final CSV file.
+The config file also accepts directories, from where you can read all the nmap files of the given directory, and the directory you wish to write the final CSV file.
 
  
 All the data you need to know about the each attribute you wish to extracy is in the [dtd file](https://svn.nmap.org/nmap/docs/nmap.dtd).
  
-the project itself contains multiple objects.
+The project itself contains multiple objects.
 
 The first object is NmapFile.
 In order to initialise the object you need to give it the object file name (with directory)

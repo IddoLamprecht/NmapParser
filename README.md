@@ -70,9 +70,10 @@ to initalise this object, you must give it the parameter:
 
 Example of how to run the project in order to extract the data and insert it into a csv file: 
 
-```from CreateCSV import CSVFile
-  
-  import os
+```
+from CreateCSV import CSVFile
+import configparser 
+import os
   
   from NmapFile import NmapFile
   File_To_Extract = "Nmap.xml"

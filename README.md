@@ -75,13 +75,14 @@ from CreateCSV import CSVFile
 import configparser 
 import os
   
-  from NmapFile import NmapFile
-  File_To_Extract = "Nmap.xml"
+ 
+ from NmapFile import NmapFile
+ File_To_Extract = "Nmap.xml"
   
-  Extract_File = NmapFile(File_To_Extract)
-  Extract_File.ExtractFile()
+ Extract_File = NmapFile(File_To_Extract)
+ Extract_File.ExtractFile()
 
-  CSVFile(csv_file_name, data_array, title_names)
+ CSVFile(csv_file_name, data_array, title_names)
   ```
   
 

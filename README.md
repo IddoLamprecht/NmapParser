@@ -2,7 +2,8 @@
 
 NmapParser is a project purposed to read nmap logs and put them in a CSV file.
 
-##Prerequisites
+
+## Prerequisites
 ''' 
   configparser
   os

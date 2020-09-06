@@ -5,8 +5,8 @@ NmapParser is a project purposed to read nmap logs and normalise the logs into a
 
 ## Prerequisites
 ```
-  configparser - install through pip install
-  os - install through pip install
+  configparser -  basic module in python
+  os - basic module in python
 ```
 
 

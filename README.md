@@ -18,7 +18,7 @@ NmapParser is a project purposed to read nmap logs and normalise the logs into a
  
  The parse is able to parse any attribute to your choosing. 
  So in order to choose what attributes you want to parse you must go into the configuration file ("ParseProperties.ini") and give the relevant information there.
- 
+ If this is the first time you are running the project you must create the configuration file, in order to do so, you need to run the python file named config in the project.
  The parameters you need to eneter are in order to extract the requested attribute: 
  1. Base Element: you need to know what is the first element in the xml file (the first element from which the requested attribute is in).
  2. Path: you need to know the path of the attribute in order to extract the data. 

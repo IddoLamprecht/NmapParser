@@ -2,7 +2,14 @@
 
 NmapParser is a project purposed to read nmap logs and put them in a CSV file.
 
-## How To use
+##Prerequisites
+''' 
+  configparser
+  os
+'''
+
+
+### How To use
  The project creates a config file named "ExtractNmapLogs.ini" there you can choose what logs you want extract and what values.
  
  There you choose from which directory you read ("Nmap_XML_dir") your nmap file and write ("Nmap_CSV_write") your result under the "Directories" property.
@@ -18,7 +25,7 @@ NmapParser is a project purposed to read nmap logs and put them in a CSV file.
  
 All the data you need to know about where to extract is in the [dtd file] (https://svn.nmap.org/nmap/docs/nmap.dtd)
  
- ### Usage
+ #### Usage
   from CreateCSV import CSVFile
   
   import os
@@ -33,7 +40,7 @@ All the data you need to know about where to extract is in the [dtd file] (https
   CSVFile(csv_file_name, data_array, title_names)
   
   
-#### License
+##### License
 
 Iddo Lamprecht
 

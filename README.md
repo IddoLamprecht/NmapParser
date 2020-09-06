@@ -16,8 +16,8 @@ NmapParser is a project purposed to read nmap logs and normalise the logs into a
  In order to make the project work, you must know from what directory and the file you wish to read the nmap logs from.
  once given you will be able to parse the file into a csv file.
  
- the parse is able to parse what attribute to your choosing. 
- so in order to choose what attributes you want to parse you must go into the config file and give the relevant information there.
+ The parse is able to parse any attribute to your choosing. 
+ So in order to choose what attributes you want to parse you must go into the config file and give the relevant information there.
  
  The parameters you need to eneter are in order to extract the requested attribute: 
  1. Base Element: you need to know what is the first element in the xml file (the first element from which the requested attribute is in).

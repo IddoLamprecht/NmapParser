@@ -1,44 +1,70 @@
 # NmapParser
 
-NmapParser is a project purposed to read nmap logs and put them in a CSV file.
+NmapParser is a project purposed to read nmap logs and normalise the logs into a csv file.
 
 
 ## Prerequisites
 ```
-  configparser
-  os
+  configparser - install through pip install
+  os - install through pip install
 ```
 
 
-### How To use
- The project creates a config file named "ExtractNmapLogs.ini" there you can choose what logs you want extract and what values.
+
+### Getting Started
+
+ In order to make the project work, you must know from what directory and the file you wish to read the nmap logs from.
+ once given you will be able to parse the file into a csv file.
  
- There you choose from which directory you read ("Nmap_XML_dir") your nmap file and write ("Nmap_CSV_write") your result under the "Directories" property.
+ the parse is able to parse what attribute to your choosing. 
+ so in order to choose what attributes you want to parse you must go into the config file and give the relevant information there.
  
- Once you choose your directories you can choose which attributes you want to read. there are two types of attributes, one that are in the file (ex: scaninfo) 
- and log attributes, attributes that are in the file multiple times and each represnt a row in the intended CSV file.
+ The parameters you need to eneter are in order to extract the requested attribute: 
+ 1. Base Element: you need to know what is the first element in the xml file (the first element from which the requested attribute is in).
+ 2. Path: you need to know the path of the attribute in order to extract the data. 
+ 3. Column Name : you need to put the data under the column name you wish to give it in the CSV file.
  
- In order to retrieve the relevant data you must put a few parameters that are relevant in order to extract the data:
+  
+ In the nmap file, there are two types of logs.
+ - File Logs - Logs that accure once in the file, and are relevant for each row in the csv file.
+ - Element Logs- Logs that reaccure in the file multiple times, and each log represents a row in the csv file.
  
- 1. Base Element: you need to know what is the first element in order to know where to search in the file ("FileElem" or "LogElem")
- 2. Path: you need to know from where the data is in order to retrieve it (under a property with the name of the base element). 
- 3. Column Name : you need to put the data under the column name of your choosing.
  
-All the data you need to know about where to extract is in the [dtd file] (https://svn.nmap.org/nmap/docs/nmap.dtd)
+ ```
+ config["log_type"] = {
+    "base_element": "",
+}
+
+config["host"] = {
+    "attribute": "path",
+}
+
+config["Extract"] = {
+    "column_name": ["attribute_value"]
+
+}
  
- #### Usage
-  from CreateCSV import CSVFile
+```
+the config file also accepts directories, from where you can read all the nmap files of the given directory, and the directory you wish to write the final CSV file.
+
+ 
+All the data you need to know about the each attribute you wish to extracy is in the [dtd file] (https://svn.nmap.org/nmap/docs/nmap.dtd)
+ 
+
+Example of how to run the project in order to extract the data: 
+
+```  from CreateCSV import CSVFile
   
   import os
   
   from NmapFile import NmapFile
+  File_To_Extract = "Nmap.xml"
   
-  Log_Source = config["Directories"]["Nmap_XML_dir"]
-  
-  Extract_File = NmapFile(Log_Source + File)
+  Extract_File = NmapFile(File_To_Extract)
   Extract_File.ExtractFile()
 
   CSVFile(csv_file_name, data_array, title_names)
+  ```
   
   
 ##### License
